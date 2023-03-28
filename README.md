@@ -20,6 +20,7 @@ Prerequisite:
 * this uses dotnet 7.x, ensure repo is dotnet 7.x compatible (or update version from the yaml file)
 * your FFXIV plugin only uses Dalamud as a third party dependencies and nothing else
 
+Steps:
 1. Copy what you need from [build_and_deploy.yaml](./.github/workflows/build_and_deploy.yaml)
 2. Create the same folders ./github/workflows from your own root repository if it doesn't exist
 3. create a new `.yaml` file, paste the content and adjust anything you need, by default it uses the repo project name as the zip file names
@@ -42,5 +43,6 @@ Upon pushing a tag on any commits to `main`, a Github action will be triggered t
 
 ## Closing thought
 
-We created this to document our attempt to automate the build and deploy from another open source plugin. We do not have the dotnet environment setup locally so using Github Actions made the most sense back then.
+We created this to document our attempt to automate the build and deploy from another open source plugin. We did not have the dotnet environment setup locally so using Github Actions made the most sense back then.
+
 This Github Action is missing an end-to-end testing CI... we might add one later just to prove this would works as intended.
